@@ -2,3 +2,7 @@
 .viminfo
 .idea
 .mixin.out
+
+world
+backup
+logs

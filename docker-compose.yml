@@ -1,0 +1,10 @@
+services:
+  mc_heavy:
+    build: .
+    ports:
+      - "25566:25565"
+    environment:
+      MC_RAM: "8G"
+    volumes:
+      - ./world:/app/world
+      - ./logs:/app/logs
