@@ -1,0 +1,40 @@
+
+#General settings
+[general]
+	#List of telegram chats that messages will be relayed to
+	chat_ids = ["-1001303246272"]
+	#Valid values:
+	#NONE
+	#TO_MINECRAFT
+	#TO_TELEGRAM
+	#TWO_SIDE
+	relay_mode = "TWO_SIDE"
+	#Verbose logging for telegram
+	verbose_logging = false
+
+	[general.relay_level]
+		user_kill_by_user = true
+		user_join = true
+		server_stop = true
+		user_leave = true
+		server_start = true
+		user_kill_by_other = true
+
+	[general.text]
+		player_leave = "\\[ Игрок *${nickname}* вышел из игры ]"
+		player_empty = "Никого нет. Может быть пора это исправить?)"
+		server_stop = "\\[ Сервер остановлен ]"
+		death_message = "\\[ ${deathmessage} ]"
+		player_join = "\\[ Игрок *${nickname}* зашел в игру ]"
+		chatmessage_to_telegram = "*${nickname}:* ${message}"
+		server_start = "\\[ Сервер запущен ]"
+		notfoundchat = "Чата `${chatid}` не найдено в списке разрешенных. Вы можете его добавить в `config/telegrambridge.cfg`"
+		player_list = "*Игроки онлайн*:${endline}${endline}${playerlist}${endline}Всего:*${playercount}*'"
+		chatmessage_to_minecraft = "§3Ретранслятор§f / <§b${nickname}§f> ${message}"
+
+	[general.telegram_config]
+		#the bot api token
+		api_token = "1653569893:AAH5R0saGw_M5OyBeipYu4C7DijoJ8Z0onU"
+		#timeout in seconds for long pooling update
+		telegram_long_pooling_timeout = 100
+
